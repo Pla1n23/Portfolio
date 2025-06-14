@@ -1,0 +1,115 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+@use "./global" as *;
+@use "./header" as *;
+@use "./main" as *;
+@use "./projects" as *;
+@use "./footer" as *;
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #2BDB46;
+  border-radius: 5px;
+  // box-shadow: inset 2px 2px 2px #525252;
+  // -webkit-border-radius: 5px;
+  // -moz-border-radius: 5px;
+  // -ms-border-radius: 5px;
+  // -o-border-radius: 5px;
+}
+
+::-webkit-scrollbar-track{
+  border: 1px solid #242424;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative; 
+  background-image: url(../img/img-noise-361x370.png);
+  width: 100%;
+  height: 100%;
+  font-family: 'Monument Extended';
+  font-weight: 500;
+
+  overflow-y: scroll;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1792px;
+  padding: 16px 0;
+  @include xxl {
+    max-width: 1312px;
+  }
+  @include xl {
+    max-width: 1152px;
+  }
+  @include lg {
+    max-width: 892px;
+  }
+  @include md {
+    max-width: 696px;
+    padding: 32px 0 68px;
+  }
+  @include sm {
+    max-width: 328px;
+    padding: 16px 0 68px;
+  }
+}
+
+h1{
+  position: absolute;
+  color: rgb(255, 255, 255);
+  text-shadow:
+  0 0 30px green,       /* Зелёный контур (тонкий) */
+  0 0 60px green,       /* Зелёный контур (толстый) */
+  20px 20px 40px black;   /* Тень */
+  font-size: 100px;
+  font-weight: 800;
+}
+
+
+
+h2{
+  font-size: 60px;
+}
+
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  --color: rgba(14, 169, 42, 0.1);
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 55px 55px;
+}

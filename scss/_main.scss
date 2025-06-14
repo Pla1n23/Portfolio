@@ -1,0 +1,614 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+
+.main__wrapper-about {
+  position: relative;
+
+  h1 {
+    font-size: 80px;
+  }
+
+  .about {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    left: 0;
+    top: 40px;
+
+    @include xxl {
+      font-size: 65px;
+    }
+
+    @include xl {
+      font-size: 55px;
+      top: 30px;
+    }
+
+    @include lg {
+      font-size: 40px;
+      top: 35px;
+    }
+
+    @include md {
+      font-size: 40px;
+      top: 25px;
+    }
+
+    @include sm {
+      font-size: 25px;
+      top: 55px;
+      right: 25px;
+    }
+  }
+
+  .about.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .button {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+
+    @include xl {
+      bottom: 5px;
+      right: -15px;
+    }
+
+    @include md {
+      bottom: 12px;
+      right: -22px;
+    }
+
+    @include sm {
+      bottom: 32px;
+      right: 0px;
+    }
+  }
+}
+
+.main__about {
+  clip-path: path(
+    "M1725 0C1762 0 1792 29.9969 1792 67V760C1792 780.435 1775.43 797 1755 797H1193C1172.57 797 1156 813.565 1156 834V911C1156 931.435 1139.43 948 1119 948H67C29.997 948 0.00018557 918.003 0 881V219C0 198.565 16.5655 182 37 182H650C670.435 182 687 165.435 687 145V37C687 16.5655 703.565 0 724 0H1725Z"
+  );
+  width: 100%;
+  height: 948px;
+  background-color: white;
+
+  position: relative;
+  z-index: 1;
+
+  padding: 32px;
+
+  @include xxl {
+    clip-path: path(
+      "M1244 0C1281 6.9258e-06 1311 29.9969 1311 67V662C1311 682.435 1294.43 699 1274 699H842C821.565 699 805 715.565 805 736V777C805 797.435 788.435 814 768 814H67C29.9969 814 0 784.003 0 747V187C0 166.565 16.5655 150 37 150H499C519.435 150 536 133.435 536 113V37C536 16.5655 552.565 0 573 0H1244Z"
+    );
+    height: 814px;
+  }
+
+  @include xl {
+    clip-path: path(
+      "M1085 0C1122 0 1152 29.9969 1152 67V470C1152 490.435 1135.43 507 1115 507H776C755.565 507 739 523.565 739 544V573C739 593.435 722.435 610 702 610H67C29.9969 610 0 580.003 0 543V166C0 145.565 16.5655 129 37 129H417C437.435 129 454 112.435 454 92V37C454 16.5655 470.565 0 491 0H1085Z"
+    );
+    height: 610px;
+  }
+
+  @include lg {
+    clip-path: path(
+      "M831 0.288086C868.003 0.288086 898 30.2852 898 67.2881V571.288C898 591.723 881.435 608.288 861 608.288H522C501.565 608.288 485 624.854 485 645.288V658.288C485 678.723 468.435 695.288 448 695.288H67C29.9969 695.288 0 665.291 0 628.288V148.288C0 127.854 16.5655 111.288 37 111.288H300C320.435 111.288 337 94.7226 337 74.2881V37.2881C337 16.8535 353.565 0.288086 374 0.288086H831Z"
+    );
+    height: 695px;
+  }
+
+  @include md {
+    clip-path: path(
+      "M664 0.199219C681.673 0.199219 696 14.5263 696 32.1992V830.199C696 850.634 679.435 867.199 659 867.199H455C434.565 867.199 418 883.765 418 904.199V917.199C418 937.634 401.435 954.199 381 954.199H32C14.3269 954.199 0 939.872 0 922.199V137.199C0 116.765 16.5655 100.199 37 100.199H298C318.435 100.199 335 83.6338 335 63.1992V37.1992C335 16.7647 351.565 0.199219 372 0.199219H664Z"
+    );
+    height: 650px;
+    height: 950px;
+  }
+
+  @include sm {
+    clip-path: path(
+      "M296 0C313.673 4.63867e-06 328 14.3269 328 32V542C328 562.435 311.435 579 291 579H179.5C164.312 579 152 591.312 152 606.5C152 621.688 164.312 634 179.5 634H289.614C305.323 634 311.709 651 296 651H32C14.3269 651 0 636.673 0 619V139C0 118.565 16.5655 102 37 102H180C199.33 102 215 86.33 215 67C215 47.67 199.33 32 180 32H37C16.5655 32 0.407514 10.9453 19.1064 2.70377C23.0508 0.965266 27.4127 0 32 0H296Z"
+    );
+    height: 650px;
+  }
+
+  .main__title-img {
+    position: absolute;
+    left: 500px;
+    bottom: -65px;
+    width: 606px;
+    height: 606px;
+
+    @include xxl {
+      left: 320px;
+      bottom: -65px;
+      width: 547px;
+      height: 547px;
+    }
+
+    @include xl {
+      left: 350px;
+      bottom: -40px;
+      width: 385px;
+      height: 385px;
+    }
+
+    @include lg {
+      left: 180px;
+      bottom: -30px;
+      width: 308px;
+      height: 308px;
+    }
+
+    @include md {
+      left: 0px;
+      bottom: -40px;
+      width: 360px;
+      height: 360px;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .main__skills-img {
+    position: absolute;
+    right: 50px;
+    top: -10px;
+    width: 660px;
+    height: 760px;
+
+    @include xxl {
+      width: 503px;
+      height: 608px;
+    }
+
+    @include xl {
+      top: 0px;
+      width: 390px;
+      height: 473px;
+    }
+
+    @include lg {
+      top: 36px;
+    }
+
+    @include md {
+      top: 280px;
+    }
+
+    @include sm {
+      top: 220px;
+      width: 215px;
+      height: auto;
+    }
+  }
+
+  .main__about-text1 {
+    position: absolute;
+    width: 945px;
+    font-size: 35px;
+    left: 80px;
+    top: 235px;
+
+    @include xxl {
+      font-size: 30px;
+      width: 745px;
+    }
+
+    @include xl {
+      font-size: 24px;
+      width: 600px;
+      top: 180px;
+    }
+
+    @include lg {
+      font-size: 20px;
+      width: 500px;
+      top: 180px;
+      left: 40px;
+    }
+
+    @include md {
+      font-size: 24px;
+      top: 140px;
+    }
+
+    @include sm {
+      font-size: 15px;
+      width: 280px;
+      top: 130px;
+    }
+  }
+
+  .main__about-text2 {
+    position: absolute;
+    width: 450px;
+    font-size: 35px;
+    left: 80px;
+    top: 450px;
+
+    @include xxl {
+      font-size: 30px;
+      width: 300px;
+    }
+
+    @include xl {
+      font-size: 24px;
+      top: 350px;
+    }
+
+    @include lg {
+      font-size: 20px;
+      top: 320px;
+      left: 40px;
+    }
+
+    @include md {
+      font-size: 24px;
+      top: 350px;
+    }
+
+    @include sm {
+      font-size: 15px;
+      width: 280px;
+      top: 500px;
+    }
+  }
+}
+
+.btn-arrow {
+  left: 750px;
+  background-color: #242424;
+
+  @include xxl {
+    top: -2px;
+    left: 550px;
+    width: 124px;
+    height: 124px;
+
+    svg {
+      width: 34px;
+    }
+  }
+
+  @include xl {
+    top: -12px;
+    left: 470px;
+    width: 100px;
+    height: 100px;
+
+    svg {
+      width: 28px;
+    }
+  }
+
+  @include lg {
+    left: 350px;
+  }
+
+  @include md {
+    left: 330px;
+    width: 80px;
+    height: 80px;
+
+    svg {
+      width: 22px;
+    }
+  }
+
+  @include sm {
+    top: 2px;
+    left: 200px;
+    width: 64px;
+    height: 64px;
+
+    svg {
+      width: 16px;
+    }
+  }
+}
+
+.main_send-me {
+  margin: 32px 0 0 0;
+  position: relative;
+  width: 100%;
+  height: 957px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 32px 64px 64px 64px;
+
+  @include xxl {
+    height: 812px;
+  }
+
+  @include xl {
+    height: 617px;
+  }
+
+  @include lg {
+    height: 668px;
+  }
+
+  @include md {
+    height: 952px;
+  }
+
+  @include sm {
+    height: 584px;
+    padding: 24px;
+  }
+
+  .main_send-me-text {
+    position: absolute;
+    font-size: 45px;
+    width: 630px;
+    margin-top: 32px;
+
+    @include xxl {
+      font-size: 34px;
+      width: 500px;
+    }
+
+    @include xl {
+      font-size: 24px;
+      width: 420px;
+    }
+
+    @include lg {
+      font-size: 20px;
+      width: 350px;
+    }
+
+    @include md {
+      font-size: 30px;
+      width: 550px;
+    }
+
+    @include sm {
+      font-size: 15px;
+      width: 200px;
+      margin-top: 16px;
+    }
+  }
+
+  .main-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .main_send-me-img {
+    position: absolute;
+    bottom: -46px;
+    left: 50px;
+    width: 553px;
+    height: auto;
+
+    @include xxl {
+      width: 524px;
+      left: 80px;
+    }
+
+    @include xl {
+      width: 340px;
+      bottom: -26px;
+    }
+
+    @include lg {
+      width: 403px;
+      bottom: -30px;
+      left: 20px;
+    }
+
+    @include md {
+      width: 288px;
+      left: 444px;
+      bottom: 550px;
+      transform: rotate(-90deg);
+    }
+
+    @include sm {
+      width: 200px;
+      left: 154px;
+      bottom: 400px;
+    }
+  }
+
+  .main_send-me-arrow {
+    position: absolute;
+    top: 75px;
+    left: 215px;
+    width: 842px;
+    height: 498px;
+
+    @include xxl {
+      width: 500px;
+      height: 390px;
+      top: 80px;
+      left: 240px;
+    }
+
+    @include xl {
+      width: 400px;
+      height: 280px;
+      top: 100px;
+      left: 180px;
+    }
+
+    @include lg {
+      width: 320px;
+      height: auto;
+      top: 200px;
+      left: 130px;
+    }
+
+    @include md {
+      transform: scaleX(-1) rotate(60deg);
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  h4 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 60px;
+    margin-bottom: 16px;
+    margin-top: 48px;
+
+    @include xxl {
+      font-size: 60px;
+      margin-top: 32px;
+    }
+
+    @include xl {
+      font-size: 45px;
+      margin-top: 16px;
+      margin-bottom: 0px;
+    }
+
+    @include lg {
+      margin-top: 32px;
+    }
+
+    @include md {
+      margin-top: 350px;
+    }
+
+    @include sm {
+      margin-top: 140px;
+      font-size: 30px;
+      text-align: start;
+    }
+  }
+
+  input,
+  textarea {
+    padding: 16px;
+    height: 80px;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    background-color: #d9d9d9;
+    color: #8d8d8d;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "Montserrat";
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    &::placeholder {
+      color: #8d8d8d;
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    &:hover,
+    &:focus {
+      border: 4px solid #515151;
+      transition: all ease 0.2s;
+    }
+
+    &:focus-visible {
+      outline: 0;
+    }
+
+    @include xxl {
+      height: 60px;
+      font-size: 20px;
+
+      &::placeholder {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    @include xl {
+      height: 50px;
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+
+    @include lg {
+    }
+
+    @include md {
+    }
+
+    @include sm {
+      height: 40px;
+      font-size: 15px;
+
+      &::placeholder {
+        font-size: 15px;
+      }
+    }
+  }
+
+  textarea {
+    max-height: 300px;
+    height: 300px;
+
+    @include xxl {
+      max-height: 200px;
+      height: 200px;
+    }
+
+    @include xl {
+      max-height: 150px;
+      height: 150px;
+    }
+    @include sm {
+      max-height: 100px;
+      height: 100px;
+    }
+  }
+
+  .btn-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #2bdb46;
+    border-radius: 10px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+
+    &:hover {
+      box-shadow: 0 0 32px rgb(0, 255, 38, 0.7);
+      transition: all ease-in-out 0.2s;
+    }
+
+    @include xxl {
+      height: 92px;
+      font-size: 24px;
+    }
+
+    @include xl {
+      height: 70px;
+      font-size: 20px;
+    }
+    @include xl {
+      height: 50px;
+      font-size: 15px;
+    }
+  }
+}

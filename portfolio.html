@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./scss/grid.css" />
+    <link rel="stylesheet" href="./scss/reset.css" />
+    <link rel="stylesheet" href="./scss/styles.css" />
+    <title>
+      Maksim Faterin – Frontend Developer Portfolio | Web Development
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Maksim Faterin, a frontend developer specializing in modern web interfaces. Check out my projects in JavaScript, HTML, CSS, and frameworks."
+    />
+    <meta
+      name="keywords"
+      content="frontend developer, portfolio, web development, HTML, CSS, JavaScript, React, Vue, web design, Фатерин Максим, сайты под ключ, веб-разработчик"
+    />
+    <meta name="author" content="Maksim Faterin" />
+    <meta name="robots" content="index, follow" />
+    <!-- Индексация страницы поисковиками -->
+    <link rel="canonical" href="https://yourportfolio.com" />
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <div class="container">
+      <div class="wrapper-swiper">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="header__wrapper" id="header-section">
+                <h1 class="name">FATERIN</h1>
+                <header class="header">
+                  <div class="background"></div>
+                  <div class="header__container">
+                    <!-- Бургер-иконка -->
+                    <div class="header__burger">
+                      <span></span>
+                    </div>
+
+                    <!-- Навигационное меню -->
+                    <nav class="header__nav">
+                      <ul>
+                        <li class="active">
+                          <a href="#header-section">HOME</a>
+                        </li>
+                        <li><a href="#projects-section">PROJECTS</a></li>
+                        <li><a href="#form">CONTACT ME</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+
+                  <h2 class="header__title-hello">HELLO!</h2>
+                  <h3 class="header__title-name">I’M MAKSIM FATERIN</h3>
+                  <img class="header__title-img" src="./img/hello.png" alt="" />
+                  <p class="header__text1">
+                    I am a fronted developer who specializes in creating
+                    beautiful and functional web interfaces.
+                  </p>
+                  <p class="header__text2">
+                    Here are my best works and projects that I worked on with
+                    love and attention to detail.
+                  </p>
+                  <img
+                    class="header__arrow-img"
+                    src="./img/Arrow_header.png"
+                    alt=""
+                  />
+                </header>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main__wrapper-about" id="about-section">
+                <h1 class="about">ABOUT ME</h1>
+                <main class="main__about">
+                  <div class="background"></div>
+                  <div class="btn-arrow">
+                    <svg
+                      width="44"
+                      height="73"
+                      viewBox="0 0 44 73"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39 5L7 36.2261L39 68"
+                        stroke="#21A826"
+                        stroke-width="9"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <img class="main__title-img" src="./img/about.png" alt="" />
+                  <img class="main__skills-img" src="./img/skills.png" alt="" />
+                  <p class="main__about-text1">
+                    Frontend developer from Moscow who is looking for
+                    development and professional growth
+                  </p>
+                  <p class="main__about-text2">
+                    From 2025 to the present, I have been working at the GIVC
+                    RTU MIREA
+                  </p>
+                </main>
+                <a href="#projects-section" class="button" data-text="Awesome">
+                  <span class="actual-text">&nbsp;PROJECTS&nbsp;</span>
+                  <span aria-hidden="true" class="hover-text"
+                    >&nbsp;PROJECTS&nbsp;</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next">
+            <button class="button" data-text="Awesome">
+              <span class="actual-text">&nbsp;ABOUT ME&nbsp;</span>
+              <span aria-hidden="true" class="hover-text"
+                >&nbsp;ABOUT&nbsp;ME&nbsp;</span
+              >
+            </button>
+          </div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div class="container-projects" id="projects-section">
+        <div class="projects">
+          <h1>PROJECTS</h1>
+
+          <img src="./img/icons/Arrow_projects.png" alt="" />
+        </div>
+
+        <div class="main_projects">
+          <div class="projects-wrapper">
+            <div class="project project_white active box" id="drivemode">
+              <div class="background"></div>
+              <a href="#drivemode" class="btn-project">
+                <svg
+                  width="40"
+                  height="42"
+                  viewBox="0 0 40 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.804 38.9691L33.7731 21L15.804 3.03093L18.835 0L39.835 21L18.835 42L15.804 38.9691Z"
+                    fill="#0F0F0F"
+                  />
+                  <path
+                    d="M36.8042 18.835V23.1649L7.53403e-05 23.1649V18.835L36.8042 18.835Z"
+                    fill="#0F0F0F"
+                  />
+                </svg>
+              </a>
+              <div class="project__title">
+                <span></span>
+                <h6>DRIVEMODE</h6>
+                <a
+                  class="project__btn"
+                  target="_blank"
+                  href="https://www.figma.com/design/dBuAeJmHMRRt1iqimt32Lc/Projects?node-id=0-1&t=fnmjRX4CgqDOlDiR-1"
+                >
+                  LEARN MORE
+                </a>
+              </div>
+
+              <div class="project__img project__img_drivemode"></div>
+            </div>
+            <div class="project project_green box">
+              <div class="background"></div>
+              <a href="#drivemode" class="btn-project">
+                <svg
+                  width="40"
+                  height="42"
+                  viewBox="0 0 40 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.804 38.9691L33.7731 21L15.804 3.03093L18.835 0L39.835 21L18.835 42L15.804 38.9691Z"
+                    fill="#0F0F0F"
+                  />
+                  <path
+                    d="M36.8042 18.835V23.1649L7.53403e-05 23.1649V18.835L36.8042 18.835Z"
+                    fill="#0F0F0F"
+                  />
+                </svg>
+              </a>
+              <div class="project__title">
+                <span></span>
+                <h6>TalentSpot</h6>
+                <a
+                  class="project__btn"
+                  target="_blank"
+                  href="https://pla1n23.github.io/Grand_folder/"
+                >
+                  LEARN MORE
+                </a>
+              </div>
+
+              <div class="project__img project__img_talentspot"></div>
+            </div>
+            <div class="project project_white box">
+              <div class="background"></div>
+              <a href="#drivemode" class="btn-project">
+                <svg
+                  width="40"
+                  height="42"
+                  viewBox="0 0 40 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.804 38.9691L33.7731 21L15.804 3.03093L18.835 0L39.835 21L18.835 42L15.804 38.9691Z"
+                    fill="#0F0F0F"
+                  />
+                  <path
+                    d="M36.8042 18.835V23.1649L7.53403e-05 23.1649V18.835L36.8042 18.835Z"
+                    fill="#0F0F0F"
+                  />
+                </svg>
+              </a>
+              <div class="project__title">
+                <span></span>
+                <h6>SpotLight</h6>
+                <a
+                  class="project__btn"
+                  target="_blank"
+                  href="https://www.figma.com/design/dBuAeJmHMRRt1iqimt32Lc/Projects?node-id=1-37885&t=fnmjRX4CgqDOlDiR-1"
+                >
+                  LEARN MORE
+                </a>
+              </div>
+
+              <div class="project__img project__img_spotlight"></div>
+            </div>
+            <div class="project project_green box">
+              <div class="background"></div>
+              <a href="#drivemode" class="btn-project">
+                <svg
+                  width="40"
+                  height="42"
+                  viewBox="0 0 40 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.804 38.9691L33.7731 21L15.804 3.03093L18.835 0L39.835 21L18.835 42L15.804 38.9691Z"
+                    fill="#0F0F0F"
+                  />
+                  <path
+                    d="M36.8042 18.835V23.1649L7.53403e-05 23.1649V18.835L36.8042 18.835Z"
+                    fill="#0F0F0F"
+                  />
+                </svg>
+              </a>
+              <div class="project__title">
+                <span></span>
+                <h6>Krnva</h6>
+                <a
+                  class="project__btn"
+                  target="_blank"
+                  href="https://www.figma.com/design/dBuAeJmHMRRt1iqimt32Lc/Projects?node-id=1-37361&t=fnmjRX4CgqDOlDiR-1"
+                >
+                  LEARN MORE
+                </a>
+              </div>
+
+              <div class="project__img project__img_krnva"></div>
+            </div>
+            <div class="project project_white box">
+              <div class="background"></div>
+              <a href="#drivemode" class="btn-project">
+                <svg
+                  width="40"
+                  height="42"
+                  viewBox="0 0 40 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.804 38.9691L33.7731 21L15.804 3.03093L18.835 0L39.835 21L18.835 42L15.804 38.9691Z"
+                    fill="#0F0F0F"
+                  />
+                  <path
+                    d="M36.8042 18.835V23.1649L7.53403e-05 23.1649V18.835L36.8042 18.835Z"
+                    fill="#0F0F0F"
+                  />
+                </svg>
+              </a>
+              <div class="project__title">
+                <span></span>
+                <h6>InParty</h6>
+                <a
+                  class="project__btn"
+                  target="_blank"
+                  href="https://www.figma.com/design/dBuAeJmHMRRt1iqimt32Lc/Projects?node-id=1-40076&t=fnmjRX4CgqDOlDiR-1"
+                >
+                  LEARN MORE
+                </a>
+              </div>
+
+              <div class="project__img project__img_inparty"></div>
+            </div>
+            <div class="project project_green box">
+              <div class="background"></div>
+              <a href="#drivemode" class="btn-project">
+                <svg
+                  width="40"
+                  height="42"
+                  viewBox="0 0 40 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.804 38.9691L33.7731 21L15.804 3.03093L18.835 0L39.835 21L18.835 42L15.804 38.9691Z"
+                    fill="#0F0F0F"
+                  />
+                  <path
+                    d="M36.8042 18.835V23.1649L7.53403e-05 23.1649V18.835L36.8042 18.835Z"
+                    fill="#0F0F0F"
+                  />
+                </svg>
+              </a>
+              <div class="project__title">
+                <span></span>
+                <h6>Calculator</h6>
+                <a
+                  class="project__btn"
+                  target="_blank"
+                  href="https://pla1n23.github.io/calculator/"
+                >
+                  LEARN MORE
+                </a>
+              </div>
+
+              <div class="project__img project__img_calculator"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main_send-me" id="form">
+        <div class="background"></div>
+        <div class="row">
+          <p class="main_send-me-text">
+            If you liked my projects and want further cooperation
+          </p>
+          <img class="main_send-me-img" src="./img/form-img.png" alt="" />
+          <img class="main_send-me-arrow" src="./img/arrow-form.png" alt="" />
+
+          <div class="col-md-4 offset-md-4">
+            <form class="main-form" id="sendForm">
+              <h4>SEND ME</h4>
+              <input
+                type="text"
+                name="entry.1893991157"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="email"
+                name="entry.1993872618"
+                placeholder="Email"
+                required
+              />
+              <textarea
+                name="entry.1860484490"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn-form">Send message</button>
+            </form>
+            <div id="formStatus" style="margin-top: 15px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-icons">
+            <a
+              href="https://www.instagram.com/_flytomoon?igsh=OG5sYzFxdmprMWRz"
+              target="_blank"
+              class="insta"
+            >
+              <img src="./img/icons/insta.svg" alt="" />
+            </a>
+            <a href="https://t.me/maksimpln" target="_blank" class="telegram">
+              <img src="./img/icons/tele.svg" alt="" />
+            </a>
+            <a href="https://github.com/Pla1n23" target="_blank" class="git">
+              <img src="./img/icons/git.svg" alt="" />
+            </a>
+            <a href="" target="_blank" class="whatsapp">
+              <img src="./img/icons/what.svg" alt="" />
+            </a>
+          </div>
+          <ul class="footer-links">
+            <li><a href="#header-section">HOME</a></li>
+            <li><a href="#projects-section">PROJECTS</a></li>
+            <li><a href="#form">CONTACT ME</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+      integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".box"), {
+        max: 3,
+        speed: 200,
+        "max-glare": 0.5,
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const list = document.querySelectorAll("li");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+
+      list.forEach((item) => item.addEventListener("click", activeLink));
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      const listButtons = document.querySelectorAll(".btn-project");
+
+      function activeProject() {
+        // Находим родительский блок с классом .project
+        const parentBlock = this.closest(".project");
+
+        // Убираем active у всех блоков .project
+        document.querySelectorAll(".project").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Добавляем active к нужному блоку
+        if (parentBlock) {
+          parentBlock.classList.add("active");
+        }
+      }
+
+      // Навешиваем обработчик на каждую кнопку
+      listButtons.forEach((button) => {
+        button.addEventListener("click", activeProject);
+      });
+
+      document
+        .getElementById("sendForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const statusDiv = document.getElementById("formStatus");
+          statusDiv.innerHTML =
+            '<p style="color: #2E53AF;">Sending message...</p>';
+
+          // Формируем URL для отправки (ЗАМЕНИТЕ YOUR_FORM_ID на реальный ID)
+          const formUrl =
+            "https://docs.google.com/forms/d/e/1FAIpQLScW3TEhHvKhj0--3cuAcJCmn7iiJKo5ELqKbZH-y9-5dFzXDw/formResponse";
+
+          // Собираем данные формы
+          const formData = new URLSearchParams();
+          formData.append(
+            "entry.1893991157",
+            form.elements["entry.1893991157"].value
+          );
+          formData.append(
+            "entry.1993872618",
+            form.elements["entry.1993872618"].value
+          );
+          formData.append(
+            "entry.1860484490",
+            form.elements["entry.1860484490"].value
+          );
+
+          // Отправляем данные
+          fetch(formUrl, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: formData,
+          })
+            .then(() => {
+              statusDiv.innerHTML =
+                '<p style="color: #2BDB46;">Message sent successfully!</p>';
+              form.reset();
+            })
+            .catch(() => {
+              statusDiv.innerHTML =
+                '<p style="color: #FC083D;">Error sending message. Please try again.</p>';
+            });
+        });
+    </script>
+  </body>
+</html>

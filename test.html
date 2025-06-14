@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #3367d6;
+    }
+
+    #status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .success {
+      background-color: #e6f4ea;
+      color: #137333;
+    }
+
+    .error {
+      background-color: #fce8e6;
+      color: #d93025;
+    }
+
+    .info {
+      background-color: #e8f0fe;
+      color: #1967d2;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Тест отправки в Google Forms</h1>
+  <p>Этот тест поможет проверить подключение к вашей Google Form</p>
+
+  <form id="testForm">
+    <div class="form-group">
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="entry.1893991157" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="entry.1993872618" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Сообщение:</label>
+      <textarea id="message" name="entry.1860484490" required></textarea>
+    </div>
+
+    <button type="submit">Отправить тестовые данные</button>
+  </form>
+
+  <div id="status"></div>
+
+  <h3>Инструкция по тестированию:</h3>
+  <ol>
+    <li>Заполните все поля формы</li>
+    <li>Нажмите "Отправить тестовые данные"</li>
+    <li>Проверьте статус отправки ниже</li>
+    <li>Откройте вашу Google Таблицу через 1-2 минуты</li>
+  </ol>
+
+  <script>
+    document.getElementById('testForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const statusDiv = document.getElementById('status');
+      statusDiv.className = 'info';
+      statusDiv.innerHTML = 'Отправка данных...';
+
+      try {
+        // Замените YOUR_FORM_ID на реальный ID вашей формы
+        const FORM_ID = '1FAIpQLScW3TEhHvKhj0--3cuAcJCmn7iiJKo5ELqKbZH-y9-5dFzXDw';
+        const formUrl = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
+
+        // Собираем данные формы
+        const formData = new FormData(form);
+        const urlParams = new URLSearchParams();
+
+        // Преобразуем FormData в URLSearchParams
+        for (const [key, value] of formData.entries()) {
+          urlParams.append(key, value);
+        }
+
+        // Добавляем параметр submit
+        urlParams.append('submit', 'Submit');
+
+        // Отправляем данные
+        const response = await fetch(formUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: urlParams.toString()
+        });
+
+        // Хотя мы не можем получить ответ из-за no-cors, отмечаем успех
+        statusDiv.className = 'success';
+        statusDiv.innerHTML = 'Данные успешно отправлены! Проверьте Google Таблицу через 1-2 минуты.';
+        form.reset();
+
+        // Для отладки выводим данные в консоль
+        console.log('Отправленные данные:', Object.fromEntries(urlParams.entries()));
+
+      } catch (error) {
+        statusDiv.className = 'error';
+        statusDiv.innerHTML = 'Ошибка при отправке: ' + error.message;
+        console.error('Ошибка:', error);
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+$breakpoint-xxl: 1919px;
+$breakpoint-xl: 1439px;
+$breakpoint-lg: 1279px;
+$breakpoint-md: 1023px;
+$breakpoint-sm: 767px;
+
+@mixin xxl {
+    @media screen and (max-width: $breakpoint-xxl) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media screen and (max-width: $breakpoint-xl) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (max-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width: $breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width: $breakpoint-sm) {
+        @content;
+    }
+}

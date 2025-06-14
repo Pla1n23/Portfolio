@@ -1,0 +1,182 @@
+@use "./variables" as *;
+
+.footer {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 64px 64px 0 0;
+  margin: 32px 0 0 0;
+  padding: 32px 0;
+  position: relative;
+  z-index: 1;
+
+  @include xxl{
+    padding: 24px 0 ;
+  }
+  @include xl {
+    padding: 16px 0 ;
+  }
+
+  @include lg {
+
+  }
+
+  @include md {
+    padding: 0;
+    border-radius: 32px 32px 0 0;
+  }
+
+  @include sm {
+    border-radius: 16px 16px 0 0;
+  }
+  .container{
+    @include md{
+      padding: 40px 0 48px;
+    }
+    @include sm{
+      padding: 40px 0 48px;
+    }
+  }
+
+
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include lg {
+      flex-direction: column;
+      align-items: start;
+      gap: 64px;
+    }
+    @include md{
+      gap: 32px;
+    }
+    @include sm{
+    }
+  }
+
+  .footer-icons {
+    display: flex;
+    gap: 32px;
+
+    @include xl {
+      gap: 24px;
+    }
+
+    @include lg {
+      order: 2;
+    }
+
+    @include md {
+
+    }
+
+    @include sm {
+
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 85px;
+      width: 85px;
+      background-color: #1e1e1e;
+      border-radius: 50%;
+      @include xxl {
+        height: 75px;
+        width: 75px;
+      }
+      @include xl {
+        height: 64px;
+        width: 64px;
+      }
+  
+      @include lg {
+        height: 75px;
+        width: 75px;
+      }
+  
+      @include md {
+        height: 64px;
+        width: 64px;
+      }
+  
+      @include sm {
+        height: 48px;
+        width: 48px;
+      }
+      img {
+        width: 44px;
+        height: 44px;
+        @include xxl {
+          width: 36px;
+          height: 36px;
+        }
+        @include xl {
+          width: 30px;
+          height: 30px;
+        }
+    
+        @include lg {
+          width: 36px;
+          height: 36px;
+        }
+    
+        @include md {
+          width: 30px;
+          height: 30px;
+        }
+    
+        @include sm {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+
+    text-decoration: none;
+    font-size: 32px;
+
+    margin: 0;
+
+    @include xxl {
+      font-size: 24px;
+      gap: 32px;
+    }
+    @include xl {
+      font-size: 20px;
+    }
+    @include lg {
+      font-size: 30px;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0;
+    }
+    @include md{
+      font-size: 24px;
+    }
+    @include sm{
+      font-size: 15px;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    li {
+      &:hover {
+        border-bottom: 4px solid #000;
+        transition: all ease 0.3s;
+        scale: 1.05;
+      }
+    }
+
+    a {
+      color: #1e1e1e;
+    }
+  }
+}

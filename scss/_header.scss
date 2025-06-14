@@ -1,0 +1,547 @@
+@use "./variables" as *;
+
+.header__wrapper {
+  position: relative;
+  height: 1070px;
+
+  @include xxl {
+    height: 814px;
+  }
+
+  @include xl {
+    height: 600px;
+  }
+
+  @include lg {
+    height: 695px;
+  }
+
+  @include md {
+    height: 950px;
+  }
+
+  @include sm {
+    height: 650px;
+  }
+
+  .name {
+    right: 0;
+    top: 40px;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 1s ease, transform 1s ease;
+
+    @include xxl {
+      font-size: 68px;
+    }
+
+    @include xl {
+      font-size: 60px;
+      top: 30px;
+    }
+
+    @include lg {
+      font-size: 45px;
+      top: 25px;
+    }
+
+    @include md {
+      font-size: 45px;
+      top: 15px;
+    }
+
+    @include sm {
+      font-size: 30px;
+      top: 50px;
+      right: 25px;
+    }
+  }
+
+  .name.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header {
+  clip-path: path("M1149 157C1149 177.435 1165.57 194 1186 194H1755C1775.43 194 1792 210.565 1792 231V881.857C1792 918.86 1762 948.857 1725 948.857H668C647.565 948.857 631 932.292 631 911.857V834C631 813.565 614.435 797 594 797H37C16.5655 797 0 780.435 0 760V67.8574C0 30.8543 29.9969 0.857422 67 0.857422H1112C1132.43 0.857422 1149 17.4229 1149 37.8574V157Z"
+    );
+  width: 100%;
+  height: 948px;
+
+  background-color: rgb(255, 255, 255);
+
+  position: relative;
+  z-index: 1;
+
+  padding: 32px;
+
+  @include xxl {
+    clip-path: path("M886 118C886 138.435 902.565 155 923 155H1275C1295.43 155 1312 171.565 1312 192V747C1312 784.003 1282 814 1245 814H543C522.565 814 506 797.435 506 777V738C506 717.565 489.435 701 469 701H37C16.5655 701 0 684.435 0 664V67C9.40742e-06 29.9969 29.9969 0 67 0H849C869.435 0 886 16.5655 886 37V118Z"
+      );
+    height: 814px;
+    padding: 24px;
+  }
+
+  @include xl {
+    clip-path: path("M760 92.7168C760 113.151 776.565 129.717 797 129.717H1115C1135.43 129.717 1152 146.282 1152 166.717V543.717C1152 580.72 1122 610.717 1085 610.717H447C426.565 610.717 410 594.151 410 573.717V528.717C410 508.282 393.435 491.717 373 491.717H37C16.5655 491.717 0 475.151 0 454.717V67.7168C0 30.7137 29.9969 0.716797 67 0.716797H723C743.435 0.716797 760 17.2823 760 37.7168V92.7168Z"
+      );
+    height: 600px;
+  }
+
+  @include lg {
+    clip-path: path("M597.62 74C597.62 94.4345 614.186 111 634.62 111H858.62C879.055 111 895.62 127.565 895.62 148V628C895.62 665.003 865.623 695 828.62 695H447.62C427.186 695 410.62 678.435 410.62 658V628C410.62 607.565 394.055 591 373.62 591H37.6201C17.1856 591 0.620117 574.435 0.620117 554V67C0.620121 29.9969 30.617 0 67.6201 0H560.62C581.055 0 597.62 16.5655 597.62 37V74Z"
+      );
+    height: 695px;
+  }
+
+  @include md {
+    clip-path: path("M391 52C391 72.4345 407.565 89 428 89H659C679.435 89 696 105.565 696 126V918C696 935.673 681.673 950 664 950H340C319.565 950 303 933.435 303 913V895C303 874.565 286.435 858 266 858H37C16.5655 858 0 841.435 0 821V32C0 14.3269 14.3269 0 32 0H354C374.435 0 391 16.5655 391 37V52Z"
+      );
+    height: 950px;
+  }
+
+  @include sm {
+    clip-path: path("M296 0C299.825 2.9561e-05 303.493 0.671177 306.893 1.90211C326.526 9.00971 310.709 31 289.829 31H130C111.222 31 96 46.2223 96 65C96 83.7777 111.222 99 130 99H291C311.435 99 328 115.565 328 136V619C328 636.673 313.673 651 296 651H32C17.9395 651 23.172 636 37.2326 636H152.5C167.688 636 180 623.688 180 608.5C180 593.312 167.688 581 152.5 581H37C16.5655 581 0 564.435 0 544V32C0 14.3269 14.3269 0 32 0H296Z"
+      );
+    height: 650px;
+  }
+
+  /* Стили бургер-иконки */
+  .header__burger {
+    display: none;
+    width: 45px;
+    height: 34px;
+    position: relative;
+    cursor: pointer;
+    z-index: 101;
+    padding: 10px;
+    margin: 16px 0 0 24px;
+    @include sm {
+      margin: 24px 0 0 0;
+    }
+  }
+
+  .header__burger span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+  }
+
+  .header__burger::before,
+  .header__burger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    left: 0;
+    transition: all 0.3s;
+  }
+
+  .header__burger::before {
+    top: 0;
+  }
+
+  .header__burger::after {
+    bottom: 0;
+  }
+
+  .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 15px;
+  }
+
+  .header__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 15px;
+  }
+
+  .header__burger.active span {
+    transform: scale(0);
+  }
+
+  /* Мобильные стили */
+  @media screen and (max-width: 1023px) {
+    .header__burger {
+      display: block;
+    }
+
+    .header__nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      background: #fff;
+      padding: 120px 40px 40px 50px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      transition: all 0.3s;
+      border-radius: 16px 0 16px 0;
+
+    }
+
+    .header__nav.active {
+      left: 0;
+    }
+
+    .header__nav ul {
+      flex-direction: column;
+      align-items: start;
+      gap: 32px;
+    }
+
+    .header__nav li a {
+      display: block;
+      padding: 10px;
+      border-bottom: 1px solid #000000;
+    }
+  }
+
+
+  .header__title-hello {
+    position: absolute;
+    font-size: 100px;
+    font-weight: 600;
+    left: 50px;
+    top: 235px;
+
+    @include xxl {
+      font-size: 75px;
+      top: 240px;
+    }
+
+    @include xl {
+      font-size: 65px;
+      top: 180px;
+    }
+
+    @include lg {
+      font-size: 65px;
+      top: 200px;
+    }
+
+    @include md {
+      font-size: 60px;
+      top: 150px;
+    }
+
+    @include sm {
+      font-size: 45px;
+      top: 150px;
+      left: 24px;
+    }
+  }
+
+  .header__title-name {
+    position: absolute;
+    font-size: 65px;
+    width: 400px;
+    left: 50px;
+    top: 450px;
+    font-weight: 600;
+
+    @include xxl {
+      font-size: 55px;
+      top: 430px;
+      width: 350px;
+    }
+
+    @include xl {
+      font-size: 45px;
+      top: 300px;
+    }
+
+    @include lg {
+      font-size: 45px;
+      top: 370px;
+    }
+
+    @include md {
+      font-size: 45px;
+      top: 310px;
+    }
+
+    @include sm {
+      font-size: 25px;
+      top: 230px;
+      left: 24px;
+    }
+  }
+
+  .header__title-img {
+    position: absolute;
+    left: 620px;
+    bottom: -55px;
+    width: 563px;
+    height: 563px;
+
+    @include xxl {
+      width: 478px;
+      height: 478px;
+      left: 480px;
+    }
+
+    @include xl {
+      width: 378px;
+      height: 378px;
+      bottom: -30px;
+      left: 450px;
+    }
+
+    @include lg {
+      width: 309px;
+      height: 309px;
+      left: 390px;
+      bottom: -25px;
+    }
+
+    @include md {
+      width: 409px;
+      height: 409px;
+      left: 300px;
+      bottom: -30px;
+    }
+
+    @include sm {
+      width: 203px;
+      height: 179px;
+      left: 16px;
+      bottom: 52px;
+    }
+  }
+
+  .header__text1 {
+    position: absolute;
+    width: 945px;
+    font-size: 32px;
+    right: 60px;
+    top: 270px;
+
+    @include xxl {
+      font-size: 24px;
+      width: 600px;
+      right: 120px;
+      top: 240px;
+    }
+
+    @include xl {
+      font-size: 18px;
+      width: 500px;
+      right: 120px;
+      top: 190px;
+    }
+
+    @include lg {
+      font-size: 18px;
+      width: 380px;
+      right: 100px;
+      top: 150px;
+    }
+
+    @include md {
+      font-size: 24px;
+      width: 300px;
+      right: 16px;
+      top: 280px;
+    }
+
+    @include sm {
+      font-size: 15px;
+      width: 300px;
+      left: 24px;
+      top: 320px;
+    }
+  }
+
+  .header__text2 {
+    position: absolute;
+    width: 500px;
+    font-size: 32px;
+    right: 100px;
+    top: 450px;
+
+    @include xxl {
+      font-size: 24px;
+      width: 320px;
+      right: 40px;
+      top: 400px;
+    }
+
+    @include xl {
+      font-size: 18px;
+      width: 280px;
+      right: 40px;
+      top: 300px;
+    }
+
+    @include lg {
+      font-size: 18px;
+      width: 350px;
+      right: 40px;
+      top: 300px;
+    }
+
+    @include md {
+      font-size: 24px;
+      width: 320px;
+      left: 50px;
+      top: 600px;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .header__arrow-img {
+    position: absolute;
+    right: 150px;
+    bottom: 120px;
+
+    @include xxl {
+      width: 220px;
+      right: 100px;
+      bottom: 100px;
+    }
+
+    @include xl {
+      width: 180px;
+      right: 100px;
+      bottom: 80px;
+    }
+
+    @include lg {
+      width: 150px;
+      right: 50px;
+      bottom: 120px;
+    }
+
+    @include md {
+      width: 200px;
+      top: 170px;
+
+    }
+
+    @include sm {
+      width: 85px;
+      top: 450px;
+      right: 24px;
+    }
+  }
+
+  nav {
+    background-color: #242424;
+    padding: 16px 32px;
+    border-radius: 64px;
+    display: inline-flex;
+    position: relative;
+    z-index: 5;
+
+    @include xxl {
+      padding: 12px 32px;
+    }
+
+    @include xl {
+      padding: 6px 48px;
+    }
+
+    @include lg {
+      padding: 6px 24px;
+    }
+
+    @include md {}
+
+    @include sm {}
+  }
+
+  ul {
+    display: inline-flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: white;
+      }
+
+      a:not([href]):not([class]) {
+        color: white;
+      }
+
+      @include xxl {
+        font-size: 26px;
+      }
+
+      @include xl {
+        font-size: 20px;
+      }
+
+      @include lg {
+        font-size: 16px;
+      }
+
+      @include md {
+        font-size: 24px;
+
+        a {
+          color: rgb(0, 0, 0);
+        }
+
+        a:not([href]):not([class]) {
+          color: rgb(0, 0, 0);
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          transition: all ease 0.3s;
+        }
+
+      }
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+
+    .active {
+      padding: 36px 32px;
+      background-color: #0f0f0f;
+      border-radius: 60px;
+      position: relative;
+      filter: drop-shadow(0px 0px 16px rgba(43, 219, 70, 1));
+      border-radius: 60px;
+      transition: all ease 0.3s;
+
+      @include xxl {
+        padding: 32px;
+      }
+
+      @include xl {}
+
+      @include lg {
+        padding: 24px;
+      }
+
+      @include md {
+        background: transparent;
+        filter: none;
+        padding: 0;
+      }
+
+      @include sm {}
+    }
+  }
+}
