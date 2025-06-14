@@ -1815,6 +1815,7 @@
 }
 @media screen and (max-width: 1023px) {
   .projects-wrapper .active .project__img {
+    height: calc(100% - 180px);
     border-radius: 24px;
     -webkit-border-radius: 24px;
     -moz-border-radius: 24px;
@@ -1839,11 +1840,21 @@
   background-repeat: no-repeat;
   background-position: start center;
 }
+@media screen and (max-width: 1023px) {
+  .projects-wrapper .active .project__img_drivemode {
+    background-position: center center;
+  }
+}
 .projects-wrapper .active .project__img_talentspot {
   background-image: url(../img/talentspot.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: start center;
+}
+@media screen and (max-width: 1023px) {
+  .projects-wrapper .active .project__img_talentspot {
+    background-position: center center;
+  }
 }
 .projects-wrapper .active .project__img_spotlight {
   background-image: url(../img/spotlight.png);
@@ -1851,11 +1862,21 @@
   background-repeat: no-repeat;
   background-position: start center;
 }
+@media screen and (max-width: 1023px) {
+  .projects-wrapper .active .project__img_spotlight {
+    background-position: center center;
+  }
+}
 .projects-wrapper .active .project__img_calculator {
   background-image: url(../img/calculator.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: start center;
+}
+@media screen and (max-width: 1023px) {
+  .projects-wrapper .active .project__img_calculator {
+    background-position: center center;
+  }
 }
 .projects-wrapper .active .project__img_krnva {
   background-image: url(../img/krnva.png);
@@ -1863,11 +1884,21 @@
   background-repeat: no-repeat;
   background-position: start center;
 }
+@media screen and (max-width: 1023px) {
+  .projects-wrapper .active .project__img_krnva {
+    background-position: center center;
+  }
+}
 .projects-wrapper .active .project__img_inparty {
   background-image: url(../img/inparty.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: start center;
+}
+@media screen and (max-width: 1023px) {
+  .projects-wrapper .active .project__img_inparty {
+    background-position: center center;
+  }
 }
 .projects-wrapper .active .project__btn {
   opacity: 1;
